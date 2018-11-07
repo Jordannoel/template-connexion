@@ -1,9 +1,9 @@
-package com.epsi.blockchainsmokers.workshopi4.exception;
+package com.jordannoel.templateconnexion.exception;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class WorkshopException extends Exception {
+public class TemplateConnexionException extends Exception {
 
     private static final long serialVersionUID = 1L;
 

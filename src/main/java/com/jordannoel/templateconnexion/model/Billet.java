@@ -1,4 +1,4 @@
-package com.epsi.blockchainsmokers.workshopi4.model;
+package com.jordannoel.templateconnexion.model;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -9,14 +9,10 @@ import javax.persistence.Id;
 
 @Getter
 @Setter
-@Entity(name = "assurance")
-public class Assurance {
+@Entity(name = "billet")
+public class Billet {
 
     @Id
     @GeneratedValue
     private int id;
-
-    private String dateDebut;
-
-    private String dateFin;
 }

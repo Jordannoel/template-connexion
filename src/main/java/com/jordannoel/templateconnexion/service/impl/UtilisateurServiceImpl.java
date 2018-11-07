@@ -1,9 +1,9 @@
-package com.epsi.blockchainsmokers.workshopi4.service.impl;
+package com.jordannoel.templateconnexion.service.impl;
 
-import com.epsi.blockchainsmokers.workshopi4.dao.UtilisateurDao;
-import com.epsi.blockchainsmokers.workshopi4.exception.WorkshopException;
-import com.epsi.blockchainsmokers.workshopi4.model.Utilisateur;
-import com.epsi.blockchainsmokers.workshopi4.service.UtilisateurService;
+import com.jordannoel.templateconnexion.dao.UtilisateurDao;
+import com.jordannoel.templateconnexion.exception.TemplateConnexionException;
+import com.jordannoel.templateconnexion.model.Utilisateur;
+import com.jordannoel.templateconnexion.service.UtilisateurService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -50,8 +50,8 @@ public class UtilisateurServiceImpl implements UtilisateurService {
     }
 
     @Override
-    public void utilisateurConnecte(Long id) throws WorkshopException {
-        WorkshopException ex = new WorkshopException();
+    public void utilisateurConnecte(Long id) throws TemplateConnexionException {
+        TemplateConnexionException ex = new TemplateConnexionException();
         if (id == null) {
             ex.addMessage("connexion", "Vous n'êtes pas connecté");
         }

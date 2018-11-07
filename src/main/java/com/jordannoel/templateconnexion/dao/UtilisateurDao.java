@@ -1,6 +1,6 @@
-package com.epsi.blockchainsmokers.workshopi4.dao;
+package com.jordannoel.templateconnexion.dao;
 
-import com.epsi.blockchainsmokers.workshopi4.model.Utilisateur;
+import com.jordannoel.templateconnexion.model.Utilisateur;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

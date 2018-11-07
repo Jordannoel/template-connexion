@@ -1,10 +1,10 @@
-package com.epsi.blockchainsmokers.workshopi4.service.impl;
+package com.jordannoel.templateconnexion.service.impl;
 
-import com.epsi.blockchainsmokers.workshopi4.dao.UtilisateurDao;
-import com.epsi.blockchainsmokers.workshopi4.exception.WorkshopException;
-import com.epsi.blockchainsmokers.workshopi4.model.Utilisateur;
-import com.epsi.blockchainsmokers.workshopi4.service.InscriptionService;
-import com.epsi.blockchainsmokers.workshopi4.utils.WorkshopUtils;
+import com.jordannoel.templateconnexion.dao.UtilisateurDao;
+import com.jordannoel.templateconnexion.exception.TemplateConnexionException;
+import com.jordannoel.templateconnexion.model.Utilisateur;
+import com.jordannoel.templateconnexion.service.InscriptionService;
+import com.jordannoel.templateconnexion.utils.TemplateConnexionUtils;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -16,9 +16,9 @@ public class InscriptionServiceImpl implements InscriptionService {
         this.utilisateurDao = utilisateurDao;
     }
 
-    public void inscrireUtilisateur(String email, String motDePasse, String confirmationMotDePasse, boolean approbation) throws WorkshopException {
+    public void inscrireUtilisateur(String email, String motDePasse, String confirmationMotDePasse, boolean approbation) throws TemplateConnexionException {
 
-        WorkshopException ex = new WorkshopException();
+        TemplateConnexionException ex = new TemplateConnexionException();
         if (email == null || email.equals("")) {
             ex.addMessage("email", "Merci de saisir votre adresse e-mail.");
         } else if (!email.matches("([^.@]+)(\\.[^.@]+)*@([^.@]+\\.)+([^.@]+)")) {
@@ -41,7 +41,7 @@ public class InscriptionServiceImpl implements InscriptionService {
             throw ex;
         }
 
-        utilisateurDao.save(new Utilisateur(email, WorkshopUtils.sha256(motDePasse)));
+        utilisateurDao.save(new Utilisateur(email, TemplateConnexionUtils.sha256(motDePasse)));
     }
 
     private boolean emailDejaExistant(String email) {

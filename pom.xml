@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.epsi.blockchainsmokers</groupId>
-    <artifactId>workshopi4</artifactId>
+    <artifactId>templateconnexion</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>workshopi4</name>
-    <description>Workshop I4 à l&#39;ESPI sur la blockchain</description>
+    <name>templateconnexion</name>
+    <description>Base de projet nécessitant une connexion</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>

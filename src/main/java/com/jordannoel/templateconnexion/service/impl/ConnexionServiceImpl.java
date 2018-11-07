@@ -1,10 +1,10 @@
-package com.epsi.blockchainsmokers.workshopi4.service.impl;
+package com.jordannoel.templateconnexion.service.impl;
 
-import com.epsi.blockchainsmokers.workshopi4.exception.WorkshopException;
-import com.epsi.blockchainsmokers.workshopi4.model.Utilisateur;
-import com.epsi.blockchainsmokers.workshopi4.service.ConnexionService;
-import com.epsi.blockchainsmokers.workshopi4.service.UtilisateurService;
-import com.epsi.blockchainsmokers.workshopi4.utils.WorkshopUtils;
+import com.jordannoel.templateconnexion.exception.TemplateConnexionException;
+import com.jordannoel.templateconnexion.model.Utilisateur;
+import com.jordannoel.templateconnexion.service.ConnexionService;
+import com.jordannoel.templateconnexion.service.UtilisateurService;
+import com.jordannoel.templateconnexion.utils.TemplateConnexionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,9 +18,9 @@ public class ConnexionServiceImpl implements ConnexionService {
         this.utilisateurService = utilisateurService;
     }
 
-    public Utilisateur connecterUtilisateur(String email, String motDePasse) throws WorkshopException {
+    public Utilisateur connecterUtilisateur(String email, String motDePasse) throws TemplateConnexionException {
 
-        WorkshopException ex = new WorkshopException();
+        TemplateConnexionException ex = new TemplateConnexionException();
 
         if (email != null && !email.equals("")) {
             if (!email.matches("([^.@]+)(\\.[^.@]+)*@([^.@]+\\.)+([^.@]+)")) {
@@ -44,6 +44,6 @@ public class ConnexionServiceImpl implements ConnexionService {
     }
 
     private boolean motDePasseCorrect(String email, String motDePasse) {
-        return WorkshopUtils.sha256(motDePasse).equals(utilisateurService.findMotDePasseByEmail(email));
+        return TemplateConnexionUtils.sha256(motDePasse).equals(utilisateurService.findMotDePasseByEmail(email));
     }
 }

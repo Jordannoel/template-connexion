@@ -1,12 +1,12 @@
-package com.epsi.blockchainsmokers.workshopi4;
+package com.jordannoel.templateconnexion;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Workshopi4Application {
+public class TemplateConnexion {
 
     public static void main(String[] args) {
-        SpringApplication.run(Workshopi4Application.class, args);
+        SpringApplication.run(TemplateConnexion.class, args);
     }
 }

@@ -1,4 +1,4 @@
-package com.epsi.blockchainsmokers.workshopi4.config;
+package com.jordannoel.templateconnexion.config;
 
 public class PageMapping {
 

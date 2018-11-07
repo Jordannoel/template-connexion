@@ -1,7 +1,7 @@
-package com.epsi.blockchainsmokers.workshopi4.service;
+package com.jordannoel.templateconnexion.service;
 
-import com.epsi.blockchainsmokers.workshopi4.exception.WorkshopException;
-import com.epsi.blockchainsmokers.workshopi4.model.Utilisateur;
+import com.jordannoel.templateconnexion.exception.TemplateConnexionException;
+import com.jordannoel.templateconnexion.model.Utilisateur;
 
 import java.util.List;
 
@@ -15,6 +15,6 @@ public interface UtilisateurService {
 
     List<Utilisateur> findAllByIdIn(List<Long> ids);
 
-    void utilisateurConnecte(Long id) throws WorkshopException;
+    void utilisateurConnecte(Long id) throws TemplateConnexionException;
 
 }

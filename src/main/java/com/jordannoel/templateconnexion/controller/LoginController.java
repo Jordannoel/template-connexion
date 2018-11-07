@@ -1,11 +1,11 @@
-package com.epsi.blockchainsmokers.workshopi4.controller;
+package com.jordannoel.templateconnexion.controller;
 
-import com.epsi.blockchainsmokers.workshopi4.config.ApplicationUrl;
-import com.epsi.blockchainsmokers.workshopi4.config.PageMapping;
-import com.epsi.blockchainsmokers.workshopi4.exception.WorkshopException;
-import com.epsi.blockchainsmokers.workshopi4.model.Utilisateur;
-import com.epsi.blockchainsmokers.workshopi4.service.ConnexionService;
-import com.epsi.blockchainsmokers.workshopi4.service.InscriptionService;
+import com.jordannoel.templateconnexion.config.ApplicationUrl;
+import com.jordannoel.templateconnexion.config.PageMapping;
+import com.jordannoel.templateconnexion.exception.TemplateConnexionException;
+import com.jordannoel.templateconnexion.model.Utilisateur;
+import com.jordannoel.templateconnexion.service.ConnexionService;
+import com.jordannoel.templateconnexion.service.InscriptionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -63,7 +63,7 @@ public class LoginController {
             session.setAttribute("id", utilisateur.getId());
             red.addFlashAttribute("email", utilisateur.getEmail());
             return REDIRECT + ApplicationUrl.SIGNIN_OK;
-        } catch (WorkshopException e) {
+        } catch (TemplateConnexionException e) {
             red.addFlashAttribute("errors", e.getMessages());
             return REDIRECT + ApplicationUrl.SIGNIN;
         }
@@ -93,7 +93,7 @@ public class LoginController {
             session.setAttribute("email", utilisateur.getEmail());
             session.setAttribute("id", utilisateur.getId());
             return REDIRECT + ApplicationUrl.INDEX;
-        } catch (WorkshopException e) {
+        } catch (TemplateConnexionException e) {
             modelMap.put("errors", e.getMessages());
             return PageMapping.LOGIN;
         }

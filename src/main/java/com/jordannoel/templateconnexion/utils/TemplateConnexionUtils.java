@@ -1,10 +1,10 @@
-package com.epsi.blockchainsmokers.workshopi4.utils;
+package com.jordannoel.templateconnexion.utils;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.security.MessageDigest;
 
-public class WorkshopUtils {
+public class TemplateConnexionUtils {
 
     @Autowired
 

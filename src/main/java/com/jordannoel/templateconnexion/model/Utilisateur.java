@@ -1,4 +1,4 @@
-package com.epsi.blockchainsmokers.workshopi4.model;
+package com.jordannoel.templateconnexion.model;
 
 import lombok.Getter;
 import lombok.Setter;

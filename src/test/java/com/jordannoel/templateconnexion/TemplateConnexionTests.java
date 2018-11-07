@@ -1,4 +1,4 @@
-package com.epsi.blockchainsmokers.workshopi4;
+package com.jordannoel.templateconnexion;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class Workshopi4ApplicationTests {
+public class TemplateConnexionTests {
 
     @Test
     public void contextLoads() {
